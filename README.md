@@ -4,7 +4,7 @@
 
 ## Propose a new work item
 
-Want to propose a new work item (NWI) to FG-TIDA? Do not start from this repository. Follow the procedure in the contribution guide: https://fg-tida.github.io/.github/#new
+Want to propose a new work item (NWI) to FG-TIDA? Follow the procedure in the contribution guide: https://fg-tida.github.io/.github/#new
 
 ## Contribute to this work item
 
