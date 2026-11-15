@@ -23,6 +23,20 @@ site and PDF are built for you.
 A WG that wants a single landing page listing all its specs can use the
 `profile/README.md` of its organization's `.github` repository.
 
+## Adopt a work item proposed by someone else (editors)
+
+When the working group adopts a work item submitted through a GitHub repository, editors import the exact commit recorded in the TIDA DataTracker (never `main`). First create an **empty** repository named `wg<n>-<acronym>-<spec-name>` in the working group's organization: no README, no template files, no license. Then run:
+
+```shell
+git clone https://github.com/PROPOSER/REPO.git wg-import
+cd wg-import
+git checkout -b main FULL-SHA
+git remote add wg https://github.com/fg-tida-wg<n>/wg<n>-<acronym>-<spec-name>.git
+git push wg main
+```
+
+This keeps the proposer's history and authorship up to the reviewed commit and leaves out any later changes. Then set **Settings → Pages → Source: GitHub Actions**, protect `main`, assign maintainers, and link the repository to the same DataTracker record. For a ZIP submission, create the repository from `FG-TIDA/spec-template`, unzip the package into it, and commit with the proposer as author.
+
 ## Create a new specification (once per spec)
 
 1. Go to **https://github.com/FG-TIDA/spec-template**.
