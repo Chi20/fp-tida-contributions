@@ -1,44 +1,39 @@
-**Contributing a new work item to FG-TIDA? Do not start here.** Follow the guide at [fg-tida.github.io/.github](https://fg-tida.github.io/.github/): you work in your own GitHub account (or prepare a ZIP) and submit in the TIDA DataTracker. The rest of this page is for **working group editors**, after a work item has been adopted.
-
----
-
 # TIDA Specification Template
 
-**See the template live:**
-📄 **[Web page](https://fg-tida.github.io/spec-template/)** ·
-📥 **[PDF](https://fg-tida.github.io/spec-template/specification.pdf)**
+<!-- Keep the two sections below in every repository created from this template. Once a work item is created, replace everything below the horizontal line with the metadata of the work item. -->
 
-The pages you see there are produced by this repository — they double as the
-template's documentation, explaining and demonstrating how to write a spec.
+## Propose a new work item
 
-> **Editor starting the official repository of an adopted work item?** Follow
-> **[WG-ONBOARDING.md](WG-ONBOARDING.md)**. Once your repo is created, replace
-> the text of this README with a short description of *your* specification
-> (what it is, its status, and a link to its published site).
+Want to propose a new work item (NWI) to FG-TIDA? Do not start from this repository. Follow the procedure in the contribution guide: https://fg-tida.github.io/.github/#new
+
+## Contribute to this work item
+
+Contributions to the work of a Working Group are possible once a work item has been adopted by that Working Group and its official repository has been created. The instructions are in the contribution guide: https://fg-tida.github.io/.github/#existing
+
+Anything you contribute is offered as input to the Working Group's work and may be incorporated into its deliverables. Participation follows the ITU-T and FG-TIDA participation, conduct, and IPR rules.
 
 ---
 
-A specification for the FG-TIDA working groups, authored with the shared TIDA
-template: one source that builds a modern web page and a print-ready PDF, with
-support for diagrams and auto-generated API references.
+## About this template
 
-## Quick start
+*When a work item is created from this template, replace this whole section with the metadata of the work item (see the skeleton below), a short description, and the link to its published site.*
 
-1. In your Working Group's GitHub organization (`fg-tida-wg<n>`), click **Use this
-   template → Create a new repository**, named `wg<n>-<acronym>-<spec-name>`.
-2. In the new repo: **Settings → Pages → Source: GitHub Actions**.
-3. Edit the content under `src/doc/` — replace the `<placeholders>` and the
-   example text. Full instructions are in **[WG-ONBOARDING.md](WG-ONBOARDING.md)**.
-4. Push to `main`. The site and PDF publish automatically to
-   `https://fg-tida-wg<n>.github.io/<repo-name>/`.
+This is the shared TIDA specification template: one source that builds a modern web page and a print-ready PDF, with support for diagrams and auto-generated API references. The pages below are produced by this repository, so they double as the template's documentation.
 
-## In this repository
+**See the template live:** [Web page](https://fg-tida.github.io/spec-template/) · [PDF](https://fg-tida.github.io/spec-template/specification.pdf)
 
-- `src/doc/index.rst` — the document front matter (title, abstract, authors…).
-- `src/doc/chapters/` — the chapters; they explain and demonstrate how to write
-  content, then you replace them with your own.
-- `CONTRIBUTING.md` — how to contribute, and how to build, preview, and customise the document.
-- `WG-ONBOARDING.md` — the full step-by-step guide for authors.
+The document sources are in `src/doc/` (front matter in `index.rst`, chapters in `chapters/`). To modify the template or to learn how to build and preview it, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Built on the open-source [CUTEspecs](https://github.com/debora-com/CUTEspecs)
-template.
+Built with [CUTEspecs](https://github.com/cutespecs/cutespecs).
+
+### Metadata skeleton for your work item
+
+| Field | Value |
+| --- | --- |
+| Title | |
+| Acronym | |
+| Authors | |
+| Working Group | |
+| DataTracker record | |
+| Status | |
+| Published site | |
