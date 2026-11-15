@@ -1,3 +1,7 @@
+**Contributing a new work item to FG-TIDA? Do not start here.** Follow the guide at [fg-tida.github.io/.github](https://fg-tida.github.io/.github/): you work in your own GitHub account (or prepare a ZIP) and submit in the TIDA DataTracker. The rest of this page is for **working group editors**, after a work item has been adopted.
+
+---
+
 # TIDA Specification Template
 
 **See the template live:**
@@ -7,7 +11,7 @@
 The pages you see there are produced by this repository — they double as the
 template's documentation, explaining and demonstrating how to write a spec.
 
-> **Starting a new specification?** Follow
+> **Editor starting the official repository of an adopted work item?** Follow
 > **[WG-ONBOARDING.md](WG-ONBOARDING.md)**. Once your repo is created, replace
 > the text of this README with a short description of *your* specification
 > (what it is, its status, and a link to its published site).
