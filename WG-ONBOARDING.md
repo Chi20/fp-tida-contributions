@@ -1,5 +1,7 @@
 # Starting a specification in a TIDA Working Group
 
+**For working group editors, after adoption.** If you are contributing a new work item, follow the [contribution guide](https://fg-tida.github.io/.github/) instead: you work in your own GitHub account (or prepare a ZIP) and submit in the TIDA DataTracker. The official repository described below is created by editors once the working group has adopted the work item.
+
 This guide explains how a TIDA Working Group (WG) creates and publishes a
 specification using the TIDA specification template. No prior Sphinx or
 reStructuredText experience is required — you edit text files and push, and the
