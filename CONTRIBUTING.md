@@ -1,5 +1,7 @@
 # Contributing
 
+**Working on your own draft of a new work item, before adoption?** The review rules below apply to a working group's official repository. In your own repository you commit directly to `main`. Follow the [contribution guide](https://fg-tida.github.io/.github/) to submit it. For the build steps, see section 2 onwards.
+
 This repository holds an FG-TIDA Working Group specification. Anything you do
 here — an edit, a commit, a pull request, an issue, or a comment — is a
 contribution offered as input to the Working Group's work and may be
