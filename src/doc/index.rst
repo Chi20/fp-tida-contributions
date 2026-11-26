@@ -1,189 +1,66 @@
+Versioned approval and authority provenance
+================================================
 
-.. raw:: latex
-
-    \pagestyle{plain}
-    \thispagestyle{plain}
-    %% Suppress all TOC entries for the overview chapter (sections, subsections,
-    %% Copyright addcontentsline) — restored just before \sphinxtableofcontents
-    %% so chapters from Introduction onward appear in the TOC normally.
-    \let\osiaorigaddcontentsline\addcontentsline
-    \renewcommand{\addcontentsline}[3]{}
-
-.. _chapter-overview:
-
-.. only:: html
-
-    .. admonition:: This is a document template
-        :class: tip
-
-        Replace the ``<placeholders>`` and the *lorem ipsum* text throughout with
-        your own content. This landing page is the document's front matter:
-
-        * **Abstract**, **History**, **Authors**, **Keywords** and **Foreword**
-          are standard front-matter sections — keep them and fill them in.
-        * **Chapters 1–4** demonstrate the authoring system (text, figures,
-          tables, diagrams, and API references). Read them, then replace their
-          content with your specification.
-
-        This notice appears on the web version only; it is excluded from the
-        published PDF. See the project ``CONTRIBUTING`` guide for how to build and publish.
-
-Title of this document
-========================
-
-.. only:: html
-
-    **<subtitle of this document>**
-
-.. raw:: latex
-
-    \begin{center}\textbf{<subtitle of this document>}\end{center}
+Foundation Protocol reference inputs — FP-TIDA-INPUTS v0.1
 
 Abstract
 --------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+This individual contribution supplies a proposed deferred-action source packet
+for the Theme 16 / UC-4 discussion and a separate informative mapping for the
+authority-provenance D2 input invited in PR 15. The checkpoint case compares
+legitimate continuation with reuse of an approval after a material action change.
+The mapping examines how selected FP records distinguish protocol approval from
+the origination and act-time status of a legal mandate. It states an assumed
+legal regime for each hypothetical case. Both inputs are offered for review.
 
 History
 -------
 
 .. list-table::
-    :header-rows: 1
-    :widths: 10 26 18 14 32
+   :header-rows: 1
 
-    * - Version
-      - Document
-      - Approval
-      - Focus Group
-      - Working Group
-    * - <version>
-      - <title>
-      - <date>
-      - TIDA
-      - <acronym>
-
-To access this Document as a PDF, open the published documentation site in your web
-browser and click the PDF download link, or navigate directly to
-https://debora-com.github.io/CUTEspecs/specification.pdf.
+   * - Version
+     - Date
+     - Status
+   * - 0.1
+     - 26 November 2026
+     - Initial public source-review contribution; not adopted or experimentally evaluated
 
 Authors
 -------
 
 .. list-table::
-    :header-rows: 1
-    :widths: 30 40 30
+   :header-rows: 1
 
-    * - Name
-      - Affiliation
-      - Contact
-    * - <Jane Doe>
-      - <Organization / Company>
-      - <jane.doe@example.com>
-    * - <John Smith>
-      - <Organization / Company>
-      - <john.smith@example.com>
+   * - Contributor
+     - Capacity
+     - Contact
+   * - Zhiyuan Ji (Chi20)
+     - Individual contributor
+     - zhiyuanji@agent.qq.com
 
 Keywords
 --------
 
-Lorem, ipsum, dolor, consectetur, adipiscing.
-
-.. raw:: latex
-
-    \newpage
-    \osiacenternextsection
+Agentic AI; human oversight; deferred execution; approval freshness; authority
+provenance; conferral record; observable effect.
 
 Foreword
 --------
 
-Agentic AI systems now act as autonomous entities capable of reasoning, planning, and
-executing tasks across services, infrastructures, and organizational boundaries. This
-fundamentally changes the nature of identity in digital systems: identity is no longer
-limited to human users and static machine instances but must also encompass autonomous,
-dynamic, and goal-oriented agents. And identity alone is insufficient — the core question
-extends beyond "what an entity is" to "whether, and under what conditions, that entity
-should be trusted to act".
+This document responds to existing FG-TIDA discussion requests. It is not an
+ITU Recommendation, an adopted work item, or a claim of Foundation Protocol
+conformance. The two inputs have separate review scopes. The paper authorship,
+this contribution's authorship, and prospective evaluation roles remain distinct.
+DataTracker registration and work-item allocation remain pending.
 
-The Focus Group on Trust and Identity for humans and agentic AI (FG-TIDA) addresses trust
-management and interoperable digital identity infrastructure for humans and for agentic AI,
-supporting the development of secure, trustworthy digital ecosystems in which humans and
-agentic AI can safely interact and collaborate.
-
-FG-TIDA was established under Recommendation ITU-T A.7 (Focus groups: Establishment and
-working procedures), with ITU-T Study Group 17 as its parent group. Further details are
-available in the group's terms of reference.
-
-For more news and updates about the TIDA Community, including its supporter organizations,
-please refer to the community's published resources.
-
-.. raw:: latex
-
-    \osiacenternextsection
-
-Note
-----
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
-voluptatem accusantium doloremque laudantium.
-
-.. Intellectual Property Rights — section commented out. To restore it, remove the
-   leading ".." and the indentation below, and re-add a ".. raw:: latex" block with
-   "\osiacenternextsection" before the heading (to centre it on the PDF).
-
-   Intellectual Property Rights
-   ----------------------------
-
-   ITU draws attention to the possibility that the practice or implementation of this
-   Recommendation may involve the use of a claimed Intellectual Property Right. ITU takes no
-   position concerning the evidence, validity or applicability of claimed Intellectual Property
-   Rights, whether asserted by ITU members or others outside of the Recommendation development
-   process.
-
-   As of the date of approval of this Recommendation, ITU had not received notice of intellectual
-   property, protected by patents/software copyrights, which may be required to implement this
-   Recommendation. However, implementers are cautioned that this may not represent the latest
-   information and are therefore strongly urged to consult the appropriate ITU-T databases
-   available via the ITU-T website at http://www.itu.int/ITU-T/ipr/.
-   Implementers should also be aware that the organization that originated the technically
-   equivalent document listed in the Bibliography may have received notices of intellectual
-   property required for the implementation of this Recommendation.
-
-.. raw:: latex
-
-    %% Copyright notice commented out. To restore, uncomment the lines below.
-    %% \vspace{4em}
-    %% \begin{center}\textcopyright{} ITU 2024\end{center}
-    %%
-    %% \medskip
-    %% All rights reserved. No part of this publication may be reproduced, by any means whatsoever, without the
-    %% prior written permission of ITU.
-
-    %% Restore \addcontentsline so the TOC below (and Chapter 1 onward) populate.
-    \let\addcontentsline\osiaorigaddcontentsline
-    \sphinxtableofcontents
-    \osiamainmatter
+Contents
+--------
 
 .. toctree::
-    :maxdepth: 3
-    :numbered:
-    :hidden:
+   :maxdepth: 2
 
-    chapters/01_chapter1
-    chapters/02_chapter2
-    chapters/03_chapter3
-    chapters/04_chapter4/index
-    chapters/05_annex/index
-    chapters/06_appendix/index
-    chapters/07_references
+   contributions/scope-and-routing
+   contributions/checkpoint-source-v0.1
+   contributions/d2-mapping-v0.1

@@ -1,0 +1,216 @@
+{
+  "packet_id": "FP-DC-001",
+  "version": "0.1",
+  "date": "2026-11-26",
+  "status": "proposed_for_source_review",
+  "contributor": "Zhiyuan Ji (Chi20)",
+  "scenario": "hypothetical",
+  "source_owner_review": "pending",
+  "frozen": false,
+  "reference": {
+    "paper": "arXiv:2605.23218v1",
+    "sections": [
+      "A.4.1",
+      "A.4.3"
+    ],
+    "code_repository": "https://github.com/FoundationAgents/foundation-protocol",
+    "code_commit": "2ea04c25363a495fde13166779c90b6a7c3c3780"
+  },
+  "execution": {
+    "fp_runtime_run": false,
+    "human_participant_study": false,
+    "latencies_measured": false,
+    "expected_outcomes_only": true
+  },
+  "governing_legal_regime": null,
+  "d2_legal_or_format_conformance_assessment": "not_performed",
+  "roles": {
+    "principal": "P",
+    "agent": "A",
+    "reviewer": "H",
+    "enforcement_point": "E",
+    "verifier": "V",
+    "controlled_tool": "T"
+  },
+  "technical_grant": {
+    "id": "G1",
+    "version": 1,
+    "grantor": "P",
+    "grantee": "A",
+    "operation": "release_report",
+    "destinations": [
+      "review-team-a",
+      "review-team-b"
+    ],
+    "condition": "current_state_bound_human_approval",
+    "applicability_basis": "synthetic_case_stipulation_not_a_legal_determination"
+  },
+  "review_authority": {
+    "id": "HR1",
+    "version": 1,
+    "reviewer": "H",
+    "operation": "release_report",
+    "status": "applicable_as_technical_stipulation_in_all_cases"
+  },
+  "policy": {
+    "id": "P1",
+    "version": 1,
+    "required_binding": [
+      "action_fields",
+      "review_state",
+      "grant_version",
+      "policy_version",
+      "review_authority_reference"
+    ],
+    "grant_status_required_at_attempt": true,
+    "no_current_status": "indeterminate_and_hold"
+  },
+  "states": {
+    "S1": {
+      "report_id": "R1",
+      "content_digest": "H1_symbolic_not_a_cryptographic_digest",
+      "destination": "review-team-a",
+      "grant": "G1v1",
+      "policy": "P1v1",
+      "review_authority": "HR1v1"
+    },
+    "S2": {
+      "report_id": "R1",
+      "content_digest": "H1_symbolic_not_a_cryptographic_digest",
+      "destination": "review-team-b",
+      "grant": "G1v1",
+      "policy": "P1v1",
+      "review_authority": "HR1v1"
+    }
+  },
+  "observability": {
+    "evidence_available": [
+      "current_action",
+      "reviewed_state",
+      "G1_reference",
+      "P1_reference"
+    ],
+    "evidence_presented_to_reviewer": [
+      "review_request_state"
+    ],
+    "human_notice": "not_observed",
+    "human_understanding": "not_observed",
+    "human_input_authenticity": "not_tested",
+    "institutional_oversight_capacity": "not_assessed",
+    "tool_acknowledgement": "separate_from_effect"
+  },
+  "event_order": [
+    "t0_propose_S1",
+    "t1_hold_and_present_S1",
+    "t2_approve_S1",
+    "t3_retain_S1_or_change_to_S2",
+    "t3a_C2_only_present_S2_in_new_review_request",
+    "t3b_C2_only_approve_S2_before_attempt",
+    "t4_attempt_and_consult_current_status",
+    "t5_record_disposition",
+    "t6_optional_acknowledgement",
+    "t7_separate_effect_observation"
+  ],
+  "time_semantics": "synthetic_ordering_labels_only",
+  "cases": [
+    {
+      "id": "C0",
+      "current_state": "S1",
+      "approved_state": "S1",
+      "grant_status": "applicable",
+      "expected": {
+        "authority_finding": "applicable",
+        "disposition": "permit_one_attempt"
+      },
+      "purpose": "legitimate_continuation_control"
+    },
+    {
+      "id": "C1",
+      "current_state": "S2",
+      "approved_state": "S1",
+      "grant_status": "applicable",
+      "expected": {
+        "authority_finding": "applicable",
+        "disposition": "hold_for_S2_review"
+      },
+      "purpose": "stale_approval_contrast_with_grant_scope_unchanged"
+    },
+    {
+      "id": "C2",
+      "current_state": "S2",
+      "approved_state": "S2",
+      "grant_status": "applicable",
+      "expected": {
+        "authority_finding": "applicable",
+        "disposition": "permit_one_attempt"
+      },
+      "purpose": "legitimate_reapproval_control"
+    },
+    {
+      "id": "C3",
+      "current_state": "S1",
+      "approved_state": "S1",
+      "grant_status": "revoked",
+      "revocation_effective_at": "t3_as_supplied_fixture_fact",
+      "expected": {
+        "authority_finding": "revoked",
+        "disposition": "block"
+      },
+      "purpose": "recorded_approval_does_not_override_current_revocation"
+    },
+    {
+      "id": "C4",
+      "current_state": "S1",
+      "approved_state": "S1",
+      "grant_status": "unavailable",
+      "expected": {
+        "authority_finding": "no_current_finding",
+        "disposition": "indeterminate_and_hold"
+      },
+      "purpose": "unavailable_status_is_distinct_from_revocation"
+    },
+    {
+      "id": "C5",
+      "current_state": "S1",
+      "approved_state": "S1",
+      "grant_status": "applicable",
+      "acknowledgement_evidence": "present_as_fixture_input",
+      "effect_evidence": "unavailable_as_fixture_input",
+      "expected": {
+        "authority_finding": "applicable",
+        "disposition": "permit_one_attempt",
+        "acknowledgement": "recorded",
+        "observed_effect": "unknown",
+        "automatic_retry": "not_justified"
+      },
+      "purpose": "acknowledgement_is_distinct_from_independently_observed_effect"
+    }
+  ],
+  "candidate_output_required": [
+    "packet_id",
+    "packet_version",
+    "case_id",
+    "process_instance",
+    "attempt_id",
+    "current_action_fields",
+    "reviewed_action_fields",
+    "current_state",
+    "approved_state",
+    "grant_reference",
+    "policy_reference",
+    "review_authority_reference",
+    "review_request",
+    "review_response",
+    "record_consultation",
+    "record_version_or_recency",
+    "enforcement_disposition",
+    "acknowledgement",
+    "observed_effect"
+  ],
+  "observations": [],
+  "notes": [
+    "These are proposed expectations to be reviewed before adapter execution.",
+    "No case is asserted to pass or fail in the FP implementation.",
+    "A D2 assessment requires an explicitly selected governing legal regime for each mapped case."
+  ]
+}
